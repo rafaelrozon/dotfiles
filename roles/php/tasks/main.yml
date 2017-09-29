@@ -1,0 +1,3 @@
+- name: Install PHP 7
+  homebrew: name=homebrew/php/php71 state=present
+

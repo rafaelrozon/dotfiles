@@ -1,0 +1,22 @@
+
+- name: VS code settings
+  file: path="{{ home }}/Library/Application Support/Code/User/settings.json" src="{{ home }}/dotfiles/roles/vscode/templates/settings.json" state=link
+
+- name: VS code recommended extensions
+  file: path="{{ home }}/.vscode/extensions.json" src="{{ home }}/dotfiles/roles/vscode/templates/extensions.json" state=link
+
+- name: Install extensions
+  shell: code --install-extension {{ item }}
+  with_items:
+    - Equinusocio.vsc-material-theme
+    - GrapeCity.gc-excelviewer
+    - dbaeumer.vscode-eslint
+    - felixfbecker.php-debug
+    - felixfbecker.php-intellisense
+    - felixfbecker.php-pack
+    - formulahendry.auto-close-tag
+    - jprestidge.theme-material-theme
+    - ms-vscode.atom-keybindings
+    - msjsdiag.debugger-for-chrome
+    - neilbrayfield.php-docblocker
+    - wmaurer.change-case

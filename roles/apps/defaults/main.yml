@@ -1,0 +1,30 @@
+apps_homebrew:
+  - fzf
+  - exa
+  - curl
+  - wget
+  - tree
+  - postgresql
+  - diff-so-fancy
+  - ag
+  - git-flow
+  - dockutil
+  - git-extras
+  - mackup
+  - python
+
+apps_cask:
+  - kap
+  - google-chrome
+  - evernote
+  - spotify
+  - firefox
+  - dropbox
+  - sourcetree
+  - gitkraken
+  - visual-studio-code
+  - android-studio
+  - android-platform-tools
+  - figma
+  - genymotion
+  - virtualbox

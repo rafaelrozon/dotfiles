@@ -1,0 +1,8 @@
+src_home: /Users/{{ user }}/src
+
+projects:
+  - {
+    'name': 'react_storybook_console',
+    'git': 'git@github.com:rafaelrozon/react-storybook-console.git',
+    'path': 'react_storybook_console'
+  }

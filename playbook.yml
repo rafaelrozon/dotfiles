@@ -1,0 +1,51 @@
+---
+- name: Install Apps
+  hosts: local
+  roles:
+    - package_manager
+    - apps
+  tags: apps
+
+- name: Install dev stuff
+  hosts: local
+  roles:
+    - git
+    - npm
+    - php
+    - composer
+    - valet
+    - vscode
+  tags: dev
+
+- name: Backup stuff
+  hosts: local
+  roles:
+    - mackup
+  tags: backup
+
+- name: Setup OSX preferences
+  hosts: local
+  roles:
+    - osx
+  tags: osx
+
+- name: Symlinks
+  hosts: local
+  roles:
+    - symlinks
+  tags: links
+
+- name: Projects
+  hosts: local
+  roles:
+    - projects
+  tags: projects
+
+# - name: Set up local development environment
+#   hosts: local
+#   roles:
+#     - apps
+#     - osx
+#     - symlinks
+#     - projects
+#   tags: boostrap

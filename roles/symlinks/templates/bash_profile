@@ -1,0 +1,16 @@
+### Aliases
+source ~/dotfiles/roles/symlinks/templates/aliases
+
+### Paths
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/"
+
+# Composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# Android
+export PATH="$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools:$PATH"
+
+export EDITOR=/usr/local/bin/code
+
+# Use ag to respect .gitignore
+export FZF_DEFAULT_COMMAND='ag -g ""'

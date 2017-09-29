@@ -1,0 +1,18 @@
+{
+    // Place your settings in this file to overwrite the default settings
+    "workbench.colorTheme": "Material Theme",
+    "editor.renderWhitespace": "all",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": false,
+    "window.zoomLevel": -1,
+    "materialTheme.cache.workbench.settings": {
+        "themeColours": "Default"
+    },
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": false
+  }
+  

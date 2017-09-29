@@ -1,0 +1,6 @@
+alias ls=exa
+
+# Git and Git Flow
+alias g="git"
+alias gf="git flow"
+alias gs="git status"

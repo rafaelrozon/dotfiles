@@ -1,0 +1,10 @@
+- name: Create src folder
+  file: path="{{ src_home }}" state=directory
+
+- name: Create src/projects directories
+  file: path="{{ src_home }}/{{ item.name }}" state=directory
+  with_items: "{{ projects }}"
+
+- name: Clone projects from github
+  git: repo="{{ item.git }}" dest="{{ src_home }}/{{ item.path }}"
+  with_items: "{{ projects }}"
