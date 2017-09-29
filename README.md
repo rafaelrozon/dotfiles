@@ -114,27 +114,6 @@ There are a few keyboard customizations that must be done manually:
 
 ![Modifier keys](https://dl.dropboxusercontent.com/u/1693233/github/dotfiles-mod-keys.png)
 
-what if I only want your vim?
------------------------------
-
-First make sure you have a sane vim compiled. On MacOSX, the following will do:
-
-```
-brew install macvim --HEAD --with-override-system-vim --with-python
-```
-
-The following commands will install vim-plug and download my `.vimrc`.
-
-After backing up your `~/.vim` directory and `~/.vimrc`:
-
-```
-mkdir -p ~/.vim/autoload
-curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.vimrc https://raw.githubusercontent.com/sloria/dotfiles/master/roles/vim/files/vimrc
-```
-
-You will now be able to open vim and run `:PlugInstall` to install all plugins.
-
 
 
 license
