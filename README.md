@@ -135,14 +135,6 @@ curl -fLo ~/.vimrc https://raw.githubusercontent.com/sloria/dotfiles/master/role
 
 You will now be able to open vim and run `:PlugInstall` to install all plugins.
 
-todo
-----
-
-- Full Debian and Red Hat support
-- Add more options to `dot` script, e.g. for skipping tasks
-
-[homebrew]: http://brew.sh/
-[homebrew-cask]: https://github.com/caskroom/homebrew-cask
 
 
 license
