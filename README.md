@@ -1,18 +1,17 @@
-Rafael Rozon Dotfiles
----------------------
+# Rafael Rozon Dotfiles
 
-My dotfiles, forked from [sloria/dotfiles](https://github.com/sloria/dotfiles) and converted to Ansible.
+
+My dotfiles in Ansible, forked from [sloria/dotfiles](https://github.com/sloria/dotfiles).
 
 ## !!! WARNING !!!
-Don't blindly use this without first understanding the implications. Use at your own risk.
-First clone the repository, go through the roles you need, understand them, and adjust them with your own settings, and remove what that you don't need.
+- Don't use this without first understanding the implications. Use at your own risk.
+First clone the repository, go through the playbook and roles, understand them, and adjust them with your own settings, and remove what that you don't need.
+- For MAC OS only.
 
 ## Prerequisites (install these first)
 - ansible
 - homebrew
 - git
-
-## Structure
 
 ## Roles
 - composer
@@ -32,34 +31,7 @@ First clone the repository, go through the roles you need, understand them, and 
 
 ### Apps
 
-Installs:
-- fzf
-- exa
-- curl
-- wget
-- tree
-- postgresql
-- diff-so-fancy
-- ag
-- git-flow
-- dockutil
-- git-extras
-- mackup
-- python
-- kap
-- google-chrome
-- evernote
-- spotify
-- firefox
-- dropbox
-- sourcetree
-- gitkraken
-- visual-studio-code
-- android-studio
-- android-platform-tools
-- figma
-- genymotion
-- virtualbox
+Install: `fzf, exa, curl, wget, tree, postgresql, diff-so-fancy, ag, git-flow, dockutil, git-extras, mackup, python, kap, google-chrome, evernote, spotify, firefox, dropbox, sourcetree, gitkraken, visual-studio-code, android-studio, android-platform-tools, figma, genymotion, virtualbox`
 
 ### Backup
 
@@ -71,7 +43,9 @@ Setup several MAC OS preferences and new arrangements for dock.
 
 ### Symlinks
 
-Create symlinks from users's home folder to the templates folder of the role. Currently it creates one link for .bash_profile. It also sets up shell aliases and PATH.
+- Create symlinks from users's home folder to the templates folder. Currently it creates one link for .bash_profile. It also sets up shell aliases and PATH.
+- IMPORTANT: It'll not backup any files that are in your home folder
+
 
 ### Projects
 
@@ -79,7 +53,7 @@ Clone git repositories to `<home>/src`
 
 ### Git
 
-Ensures that git is installed and has the latest version. Setup global gitignore and config files
+Ensures that git is installed and has the latest version. Setup global gitignore and config files.
 
 ### NPM
 Installs Node JS/NPM and the following packages as global:
@@ -121,12 +95,12 @@ Runs all roles. It's meant to be used for a new machine.
 - [Fork](git@github.com:rafaelrozon/dotfiles.git) this repo.
 - Clone your fork to `~/dotfiles`
 
-```
-# Replace git url with your fork
-# NOTE: It is important that you clone to ~/dotfiles
-git clone https://github.com/YOU/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-```
+  ```
+  # Replace git url with your fork
+  # NOTE: It is important that you clone to ~/dotfiles
+  git clone https://github.com/YOU/dotfiles.git ~/dotfiles
+  cd ~/dotfiles
+  ```
 
 - Update the following variables in `group_vars/local` (at a minimum)
     - `full_name`: Your name, which will be attached to commit messages, e.g. "Rafael Rozon"
@@ -139,13 +113,14 @@ cd ~/dotfiles
 
 
 ## Running
+
 ```
-cd ~/dotfiles
-bin/dot <tag>
-```
+  cd ~/dotfiles
+  bin/dot <tag>
+  ```
 
 Available tags:
-
+```
 - composer
 - apps
 - backup
@@ -162,3 +137,30 @@ Available tags:
 - osx
 - setup
 - dev: for running roles git, npm, php, composer, valet, vscode
+```
+
+Updating your dotfiles repo
+---------------------------
+
+I suggest you to create a specific branch to pull the changes from this repository. In this way you can more safely try updates without afecting any changes you may have.
+
+To keep your fork up to date with the `rafaelrozon` fork:
+
+```
+git branch -b original-fork
+git remote add rafaelrozon https://github.com/rafaelrozon/dotfiles.git
+git pull rafaelrozon original-fork
+```
+
+### Thanks
+This repo is a fork of [Sloria](https://github.com/sloria/dotfiles), which was inspired by [Holman's dotfiles](https://github.com/holman/dotfiles).
+
+### Resources
+A lot more about dotfiles here https://dotfiles.github.io
+
+### Todo
+- create backups of files before overwriting them
+- add configuration for React Native
+
+
+
