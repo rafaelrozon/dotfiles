@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 #
 # Sync local branches with "origin", then switch
 # back to original branch.

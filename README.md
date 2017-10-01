@@ -1,151 +1,168 @@
-dotfiles
-========
+# Rafael Rozon Dotfiles
 
-[sloria's dotfiles](https://github.com/sloria/dotfiles-old), rewritten as Ansible roles. Fully supports MacOSX. Red Hat and Debian support is good but not as complete.
 
-a few neat features
--------------------
+My dotfiles in Ansible, forked from [sloria/dotfiles](https://github.com/sloria/dotfiles).
 
-- zsh configured with [prezto](https://github.com/sorin-ionescu/prezto).
-- nice fonts for the terminal and coding.
-- iterm2 profile (w/ hotkey, themes, etc.)
-- anaconda python (Miniconda 3 distribution).
-- a tmux.conf that's pretty neat.
-- [tmuxp](https://tmuxp.git-pull.com/en/latest/) for tmux session management
-- vim with [vim-plug](https://github.com/junegunn/vim-plug) for plugin management. All configuration in a single file [.vimrc](https://github.com/sloria/dotfiles/blob/master/roles/vim/files/vimrc).
-- pluggable. Everything is optional. Fork this. Remove what you don't use. Configure what you do use.
-- Mac packages installed with [homebrew][]. Mac apps installed with [homebrew-cask][].
-- Useful git aliases
-- Optional git commit signing with GPG
+## !!! WARNING !!!
+- Don't use this without first understanding the implications. Use at your own risk.
+First clone the repository, go through the playbook and roles, understand them, and adjust them with your own settings, and remove what that you don't need.
+- For MAC OS only.
 
-prerequisites (install these first)
------------------------------------
+## Prerequisites (install these first)
+- ansible
+- homebrew
+- git
 
-- ansible >= 1.6
-- homebrew (If on Mac OSX)
-- git (homebrew installable on Mac OSX)
+## Roles
+- composer
+- apps
+- dev
+- backup
+- valet
+- git
+- mackup
+- symlinks
+- npm
+- packagE_manager
+- projects
+- vscode
+- zsh
+- osx
 
-install
--------
+### Apps
 
-- [Fork](https://github.com/sloria/dotfiles/fork) this repo.
-- Clone your fork.
+Install: `fzf, exa, curl, wget, tree, postgresql, diff-so-fancy, ag, git-flow, dockutil, git-extras, mackup, python, kap, google-chrome, evernote, spotify, firefox, dropbox, sourcetree, gitkraken, visual-studio-code, android-studio, android-platform-tools, figma, genymotion, virtualbox`
 
-```bash
-# Replace git url with your fork
-# NOTE: It is important that you clone to ~/dotfiles
-$ git clone https://github.com/YOU/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-```
+### Backup
+
+Install Mackup and setup Google Drive as the default storage.
+
+### OSX
+
+Setup several MAC OS preferences and new arrangements for dock.
+
+### Symlinks
+
+- Create symlinks from users's home folder to the templates folder. Currently it creates one link for .bash_profile. It also sets up shell aliases and PATH.
+- IMPORTANT: It'll not backup any files that are in your home folder
+
+
+### Projects
+
+Clone git repositories to `<home>/src`
+
+### Git
+
+Ensures that git is installed and has the latest version. Setup global gitignore and config files.
+
+### NPM
+Installs Node JS/NPM and the following packages as global:
+
+- webpack
+- nodemon
+- gulp
+- eslint
+- eslint-config-airbnb
+- eslint-plugin-react
+- babel
+
+### PHP
+Installs PHP 7.1.
+
+### VS Code
+Installs Visual Studio Code and the following extensions:
+
+- Equinusocio.vsc-material-theme
+- GrapeCity.gc-excelviewer
+- dbaeumer.vscode-eslint
+- felixfbecker.php-debug
+- felixfbecker.php-intellisense
+- felixfbecker.php-pack
+- formulahendry.auto-close-tag
+- jprestidge.theme-material-theme
+- ms-vscode.atom-keybindings
+- msjsdiag.debugger-for-chrome
+- neilbrayfield.php-docblocker
+- wmaurer.change-case
+
+
+### Boostrap
+
+Runs all roles. It's meant to be used for a new machine.
+
+## Install
+
+- Fork this repo.
+- Clone your fork to `~/dotfiles`
+
+  ```
+  # Replace git url with your fork
+  # NOTE: It is important that you clone to ~/dotfiles
+  git clone https://github.com/YOU/dotfiles.git ~/dotfiles
+  cd ~/dotfiles
+  ```
 
 - Update the following variables in `group_vars/local` (at a minimum)
-    - `full_name`: Your name, which will be attached to commit messages, e.g. "Steven Loria"
+    - `full_name`: Your name, which will be attached to commit messages, e.g. "Rafael Rozon"
     - `git_user`: Your Github username.
     - `git_email`: Your git email address.
-- Optional, but recommended: Update `group_vars/local` with the programs you want installed by [homebrew][], [homebrew-cask][], and npm.
-    - `osx_homebrew_packages`:  Utilities that don't get installed by the roles.
-    - `osx_cask_packages`: Mac Apps you want installed with [homebrew-cask][].
-    - `npm_global_packages`: Node utilities.
-- Edit `local_env.yml` as you see fit. Remove any roles you don't use. Edit roles that you do use.
-- Run the installation script.
+- Optional, but recommended:
+    - Update `apps_homebrew` and `apps_cask` in apps role with the programs you want installed by homebrew and homebew-cask
+    - Update `npm_global_packages` in npm role
+    - Edit `playbook.yml` as you see fit. Remove any roles you don't use. Edit roles that you do use.
 
-```bash
-$ ./bin/dot-bootstrap
+
+## Running
+
+```
+  cd ~/dotfiles
+  bin/dot <tag>
+  ```
+
+Available tags:
+```
+- composer
+- apps
+- backup
+- php
+- valet
+- git
+- mackup
+- symlinks
+- npm
+- packagE_manager
+- projects
+- vscode
+- zsh
+- osx
+- setup
+- dev: for running roles git, npm, php, composer, valet, vscode
 ```
 
-updating your local environment
--------------------------------
-
-Once you have the dotfiles installed you can run the following command to rerun the ansible playbook:
-
-```bash
-$ dot-update
-```
-
-updating your dotfiles repo
+Updating your dotfiles repo
 ---------------------------
 
-To keep your fork up to date with the `sloria` fork:
+I suggest you to create a specific branch to pull the changes from this repository. In this way you can more safely try updates without afecting any changes you may have.
+
+To keep your fork up to date with the `rafaelrozon` fork:
 
 ```
-$ git remote add sloria https://github.com/sloria/dotfiles.git
-$ git pull sloria master
+git branch original-fork
+git checkout original-fork
+git remote add rafaelrozon https://github.com/rafaelrozon/dotfiles.git
+git pull rafaelrozon original-fork
 ```
 
-commands
---------
+### Thanks
+This repo is a fork of [Sloria](https://github.com/sloria/dotfiles), which was inspired by [Holman's dotfiles](https://github.com/holman/dotfiles).
 
-There are three main commands in the `bin` directory for setting up and updating development environments:
+### Resources
+A lot more about dotfiles here https://dotfiles.github.io
 
-- `dot-bootstrap`: sets up local environment by executing all roles in `local_env.yml`.
-- `dot-update`: updates local environment by executing all roles in `local_env.yml` except for the ones tagged with "bootstrap".
-
-special files
--------------
-
-All configuration is done in `~/dotfiles`. Each role may contain (in addition to the typical ansible directories and files) a number of special files
-
-- **role/\*.zsh**: Any files ending in `.zsh` get loaded into your environment.
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made available everywhere.
-
-notes
------
-
-**python**
-
-The `python` topic installs [miniconda](http://conda.pydata.org/miniconda.html). The installation is entirely self-contained, and lives at `~/miniconda`.
-
-**iterm2**
-
-To import the iterm2 profile, go to your iterm2 preferences, and enable "Load preferences from custom folder" and select the iterm2 folder in the `misc/` directory.
-
-![iterm2 profile](https://dl.dropboxusercontent.com/u/1693233/github/dotfiles-iterm2.png)
-
-**macosx keyboard settings**
-
-There are a few keyboard customizations that must be done manually:
-
-- Turning repeat speed up to 11.
-
-![Keyboard settings](https://dl.dropboxusercontent.com/u/1693233/github/dotfiles-mac-keys.png "Key repeat settings")
+### Todo
+- create backups of files before overwriting them
+- add configuration for React Native
+- create docker/vagrant box for testing
 
 
-- Mapping Caps Lock to Ctrl.
 
-![Modifier keys](https://dl.dropboxusercontent.com/u/1693233/github/dotfiles-mod-keys.png)
-
-what if I only want your vim?
------------------------------
-
-First make sure you have a sane vim compiled. On MacOSX, the following will do:
-
-```
-brew install macvim --HEAD --with-override-system-vim --with-python
-```
-
-The following commands will install vim-plug and download my `.vimrc`.
-
-After backing up your `~/.vim` directory and `~/.vimrc`:
-
-```
-mkdir -p ~/.vim/autoload
-curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.vimrc https://raw.githubusercontent.com/sloria/dotfiles/master/roles/vim/files/vimrc
-```
-
-You will now be able to open vim and run `:PlugInstall` to install all plugins.
-
-todo
-----
-
-- Full Debian and Red Hat support
-- Add more options to `dot` script, e.g. for skipping tasks
-
-[homebrew]: http://brew.sh/
-[homebrew-cask]: https://github.com/caskroom/homebrew-cask
-
-
-license
--------
-
-[MIT Licensed](http://sloria.mit-license.org/).

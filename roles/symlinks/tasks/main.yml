@@ -1,24 +1,25 @@
 - name: Create backup folder
   file: path={{ home }}/backup state=directory
 
-- name: Registering timestamp
-  command: date +%Y%m%d%H%M%S
-  register: today
+# - name: Registering timestamp
+#   command: date +%Y%m%d%H%M%S
+#   register: today
 
-- name: Ensure files exists
-  copy:
-    content: ""
-    dest: "{{ home }}/.{{ item }}"
-    force: no
-  with_items: "{{symlinks}}"
+# - name: Ensure files exists
+#   copy:
+#     content: ""
+#     dest: "{{ home }}/.{{ item }}"
+#     force: no
+#   with_items: "{{symlinks}}"
 
-- name: Backup files
-  copy:
-    src: "{{ home }}/.{{ item }}"
-    dest: "{{ home }}/backup/.{{ item }}_{{ today.stdout }}"
-  with_items: "{{symlinks}}"
+# - name: Backup files
+#   copy:
+#     src: "{{ home }}/.{{ item }}"
+#     dest: "{{ home }}/backup/.{{ item }}_{{ today.stdout }}"
+#     follow: yes
+#   with_items: "{{symlinks}}"
 
 - name: Symlink dotfiles
   file: path={{ home }}/.{{ item }} src={{ home }}/dotfiles/roles/symlinks/templates/{{ item }} state=link force=yes
   with_items: "{{symlinks}}"
-    
+
