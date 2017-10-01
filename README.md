@@ -92,7 +92,7 @@ Runs all roles. It's meant to be used for a new machine.
 
 ## Install
 
-- [Fork](git@github.com:rafaelrozon/dotfiles.git) this repo.
+- Fork this repo.
 - Clone your fork to `~/dotfiles`
 
   ```
@@ -147,7 +147,8 @@ I suggest you to create a specific branch to pull the changes from this reposito
 To keep your fork up to date with the `rafaelrozon` fork:
 
 ```
-git branch -b original-fork
+git branch original-fork
+git checkout original-fork
 git remote add rafaelrozon https://github.com/rafaelrozon/dotfiles.git
 git pull rafaelrozon original-fork
 ```
@@ -161,6 +162,7 @@ A lot more about dotfiles here https://dotfiles.github.io
 ### Todo
 - create backups of files before overwriting them
 - add configuration for React Native
+- create docker/vagrant box for testing
 
 
 
