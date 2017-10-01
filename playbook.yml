@@ -2,20 +2,44 @@
 - name: Install Apps
   hosts: local
   roles:
-    - package_manager
     - apps
   tags: apps
 
-- name: Install dev stuff
+- name: Install git
   hosts: local
   roles:
     - git
+  tags: git dev
+
+- name: Install npm
+  hosts: local
+  roles:
     - npm
+  tags: npm dev
+
+- name: Install php
+  hosts: local
+  roles:
     - php
+  tags: php dev
+
+- name: Install composer
+  hosts: local
+  roles:
     - composer
+  tags: composer dev
+
+- name: Install valet
+  hosts: local
+  roles:
     - valet
+  tags: valet dev
+
+- name: Install vscode
+  hosts: local
+  roles:
     - vscode
-  tags: dev
+  tags: vscode dev
 
 - name: Backup stuff
   hosts: local
@@ -41,11 +65,18 @@
     - projects
   tags: projects
 
-# - name: Set up local development environment
-#   hosts: local
-#   roles:
-#     - apps
-#     - osx
-#     - symlinks
-#     - projects
-#   tags: boostrap
+- name: Set up local development environment
+  hosts: local
+  roles:
+    - apps
+    - mackup
+    - osx
+    - git
+    - npm
+    - php
+    - composer
+    - valet
+    - symlinks
+    - projects
+    - vscode
+  tags: boostrap

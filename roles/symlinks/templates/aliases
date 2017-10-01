@@ -1,6 +1,30 @@
+# specify full path for alias that invoke a script
+
 alias ls=exa
 
-# Git and Git Flow
+################ Git ################
 alias g="git"
 alias gf="git flow"
 alias gs="git status"
+alias ..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias e="code"
+
+#
+# Delete all local branches that have been merged into HEAD. Stolen from
+# our favorite @tekkub:
+#
+# https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
+alias  git-clean="git branch -d `git branch --merged  | grep -v '^*' | grep -v 'master' | tr -d '\n'`"
+
+#
+# Nukes a branch locally and on the origin remote.
+#
+# $1 - Branch name.
+#
+# Examples: git nuke add-git-nuke
+#
+alias git-nuke="git branch -d $1 && git push origin :$1"
+
+alias git-sync="~/dotfiles/roles/symlinks/templates/git-sync"

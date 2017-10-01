@@ -5,7 +5,7 @@
   file: path={{ home }}/.mackup.cfg src={{ home }}/dotfiles/roles/mackup/templates/mackup.cfg state=link force=yes
 
 - name: Create backup directory
-  file: path={{ home }}/Dropbox/backup state=directory
+  file: path="{{ home }}/Google Drive/backup" state=directory
 
 - name: Backup files
   shell: mackup backup
