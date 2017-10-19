@@ -65,6 +65,12 @@ Installs Node JS/NPM and the following packages as global:
 - eslint-config-airbnb
 - eslint-plugin-react
 - babel
+- yo
+- react-native-cli
+- flow-bin
+- flow-typed
+- create-react-app
+
 
 ### PHP
 Installs PHP 7.1.

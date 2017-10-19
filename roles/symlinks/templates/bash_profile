@@ -10,7 +10,13 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 # Android
 export PATH="$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools:$PATH"
 
+export PATH="$HOME/usr/local/bin/node:$PATH"
+
+export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
+
 export EDITOR=/usr/local/bin/code
+
+export TMPDIR=/tmp/rafaelrozon
 
 # Use ag to respect .gitignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
