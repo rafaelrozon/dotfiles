@@ -2,15 +2,22 @@
     "recommendations": [
         "Equinusocio.vsc-material-theme",
         "GrapeCity.gc-excelviewer",
+        "akamud.vscode-theme-onedark",
+        "cmstead.jsrefactor",
         "dbaeumer.vscode-eslint",
         "felixfbecker.php-debug",
         "felixfbecker.php-intellisense",
         "felixfbecker.php-pack",
         "formulahendry.auto-close-tag",
+        "haaaad.ansible",
         "jprestidge.theme-material-theme",
         "ms-vscode.atom-keybindings",
         "msjsdiag.debugger-for-chrome",
         "neilbrayfield.php-docblocker",
-        "wmaurer.change-case"
+        "shinnn.stylelint",
+        "tanato.vscode-gulp",
+        "wmaurer.change-case",
+        "xabikos.ReactSnippets",
+        "zhuangtongfa.Material-theme"
     ]
 }

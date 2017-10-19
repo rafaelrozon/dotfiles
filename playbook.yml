@@ -9,37 +9,37 @@
   hosts: local
   roles:
     - git
-  tags: git dev
+  tags: git
 
 - name: Install npm
   hosts: local
   roles:
     - npm
-  tags: npm dev
+  tags: npm
 
 - name: Install php
   hosts: local
   roles:
     - php
-  tags: php dev
+  tags: php
 
 - name: Install composer
   hosts: local
   roles:
     - composer
-  tags: composer dev
+  tags: composer
 
 - name: Install valet
   hosts: local
   roles:
     - valet
-  tags: valet dev
+  tags: valet
 
 - name: Install vscode
   hosts: local
   roles:
     - vscode
-  tags: vscode dev
+  tags: vscode
 
 - name: Backup stuff
   hosts: local

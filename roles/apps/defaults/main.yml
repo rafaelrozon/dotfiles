@@ -12,6 +12,8 @@ apps_homebrew:
   - git-extras
   - mackup
   - python
+  - watchman
+  - yarn
 
 apps_cask:
   - kap
