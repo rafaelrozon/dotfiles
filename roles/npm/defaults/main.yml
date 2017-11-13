@@ -13,3 +13,5 @@ npm_global_packages:
   - flow-bin
   - flow-typed
   - create-react-app
+  - typescript
+  - prettier

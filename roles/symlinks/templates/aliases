@@ -10,6 +10,7 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias e="code"
+alias gckout="git checkout -- ."
 
 #
 # Delete all local branches that have been merged into HEAD. Stolen from
@@ -28,3 +29,5 @@ alias  git-clean="git branch -d `git branch --merged  | grep -v '^*' | grep -v '
 alias git-nuke="git branch -d $1 && git push origin :$1"
 
 alias git-sync="~/dotfiles/roles/symlinks/templates/git-sync"
+
+alias npm_ls_global="npm list -g --depth=0"

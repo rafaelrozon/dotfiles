@@ -16,6 +16,7 @@
     "css.validate": false,
     "scss.validate": false,
     "javascript.validate.enable": false,
-    "workbench.colorTheme": "Material Theme",
-    "editor.minimap.enabled": false
+    "workbench.colorTheme": "Atom One Light",
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "left"
 }

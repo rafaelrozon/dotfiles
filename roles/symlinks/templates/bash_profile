@@ -12,6 +12,8 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/
 
 export PATH="$HOME/usr/local/bin/node:$PATH"
 
+export PATH="/Library/PostgreSQL/9.4/bin:$PATH"
+
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
 
 export EDITOR=/usr/local/bin/code
@@ -20,3 +22,6 @@ export TMPDIR=/tmp/rafaelrozon
 
 # Use ag to respect .gitignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+# added by Anaconda3 5.0.1 installer
+export PATH="/anaconda3/bin:$PATH"
