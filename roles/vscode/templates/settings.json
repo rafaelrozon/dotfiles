@@ -8,15 +8,25 @@
     "editor.formatOnPaste": false,
     "window.zoomLevel": -1,
     "materialTheme.cache.workbench.settings": {
-        "themeColours": "Default"
+        "themeColours": "Palenight"
     },
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": false,
+    "javascript.format.enable": false,
+    "prettier.eslintIntegration": true,
     "stylelint.enable": true,
     "css.validate": false,
     "scss.validate": false,
     "javascript.validate.enable": false,
-    "workbench.colorTheme": "Atom One Light",
     "editor.minimap.enabled": false,
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Default Light+",
+    "extensions.ignoreRecommendations": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "files.autoSave": "afterDelay",
+    "editor.cursorStyle": "line",
+    "materialTheme.fixIconsRunning": false,
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "eslint.nodePath": "/usr/local/bin/eslint"
 }

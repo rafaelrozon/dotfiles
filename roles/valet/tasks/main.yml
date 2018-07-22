@@ -1,14 +1,14 @@
-- name: Check if Valet is installed
-  shell: which valet
-  register: valet_path
+# - name: Check if Valet is installed
+#   shell: which valet
+#   register: valet_path
 
 - name: Require Valet
   shell: composer global require laravel/valet
-  when: valet_path.stdout == ''
+  # when: valet_path.stdout == ''
     
 - name: Install Valet
   command: valet install
-  when: valet_path.stdout == ''
+  # when: valet_path.stdout == ''
 
 - name: Stop Apache if it's running
   shell: apachectl stop

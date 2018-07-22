@@ -19,6 +19,8 @@ alias gckout="git checkout -- ."
 # https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
 alias  git-clean="git branch -d `git branch --merged  | grep -v '^*' | grep -v 'master' | tr -d '\n'`"
 
+alias  git-clean-colony="git branch -d `git branch --merged  | grep 'COV2K*' | grep -v 'master' | grep -v 'releases/*' | tr -d '\n'`"
+
 #
 # Nukes a branch locally and on the origin remote.
 #

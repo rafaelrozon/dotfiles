@@ -1,15 +1,15 @@
-- name: Check if Composer is installed
-  shell: which composer
-  register: composer_path_stat
+# - name: Check if Composer is installed
+#   shell: which composer
+#   register: composer_path_stat
 
 - name: Download Composer installer
   get_url: url=http://getcomposer.org/installer dest=/tmp/composer-installer.php mode=0755
-  when: composer_path_stat.stdout == ''
+  # when: composer_path_stat.stdout == ''
 
 - name: Run Composer installer
   shell: php composer-installer.php chdir=/tmp creates={{ composer_path }}
-  when: composer_path_stat.stdout == ''
+  # when: composer_path_stat.stdout == ''
 
 - name: Make Composer accessible globally
   shell: mv /tmp/composer.phar {{ composer_path }} creates={{ composer_path }}
-  when: composer_path_stat.stdout == ''
+  # when: composer_path_stat.stdout == ''
