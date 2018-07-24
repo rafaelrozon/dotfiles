@@ -9,7 +9,7 @@ First clone the repository, go through the playbook and roles, understand them, 
 - For MAC OS only.
 
 ## Prerequisites (install these first)
-- ansible
+- ansible (see /misc/install_ansible.sh)
 - homebrew
 - git
 
@@ -82,7 +82,7 @@ Setup several MAC OS preferences and new arrangements for dock.
 
 ### Projects
 
-Clone git repositories to `<home>/src`
+Clone git repositories to `<home>/workspace`
 
 ### Git
 
