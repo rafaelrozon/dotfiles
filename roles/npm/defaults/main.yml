@@ -1,17 +1,4 @@
 npm_global_packages:
-  - webpack
-  - nodemon
-  - gulp
-  - gulp-cli
-  - node-sass
-  - eslint
-  - eslint-config-airbnb
-  - eslint-plugin-react
-  - babel
   - yo
   - react-native-cli
-  - flow-bin
-  - flow-typed
   - create-react-app
-  - typescript
-  - prettier

@@ -57,7 +57,7 @@
   hosts: local
   roles:
     - symlinks
-  tags: links
+  tags: symlinks
 
 - name: Projects
   hosts: local
@@ -79,4 +79,4 @@
     - symlinks
     - projects
     - vscode
-  tags: boostrap
+  tags: setup

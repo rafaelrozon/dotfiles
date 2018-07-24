@@ -23,15 +23,48 @@ First clone the repository, go through the playbook and roles, understand them, 
 - mackup
 - symlinks
 - npm
-- packagE_manager
+- package_manager
 - projects
 - vscode
 - zsh
 - osx
 
 ### Apps
+- fzf
+- exa
+- curl
+- wget
+- tree
+- postgresql
+- diff-so-fancy
+- ag
+- git-flow
+- dockutil
+- git-extras
+- mackup
+- python
+- mas
+- google-chrome
+- evernote
+- spotify
+- firefox
+- dropbox
+- sourcetree
+- gitkraken
+- visual-studio-code
+- virtualbox
+- phpstorm
+- datagrip
+- whatsapp
+- postman
+- karabiner
+- altair
+- expo-xde
+- soda-player
+- google-backup-and-sync
+- slack
 
-Install: `fzf, exa, curl, wget, tree, postgresql, diff-so-fancy, ag, git-flow, dockutil, git-extras, mackup, python, kap, google-chrome, evernote, spotify, firefox, dropbox, sourcetree, gitkraken, visual-studio-code, android-studio, android-platform-tools, figma, genymotion, virtualbox`
+
 
 ### Backup
 
@@ -58,17 +91,8 @@ Ensures that git is installed and has the latest version. Setup global gitignore
 ### NPM
 Installs Node JS/NPM and the following packages as global:
 
-- webpack
-- nodemon
-- gulp
-- eslint
-- eslint-config-airbnb
-- eslint-plugin-react
-- babel
 - yo
 - react-native-cli
-- flow-bin
-- flow-typed
 - create-react-app
 
 
@@ -136,7 +160,7 @@ Available tags:
 - mackup
 - symlinks
 - npm
-- packagE_manager
+- package_manager
 - projects
 - vscode
 - zsh

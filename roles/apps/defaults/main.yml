@@ -15,7 +15,6 @@ apps_homebrew:
   - mas
 
 apps_cask:
-  - kap
   - google-chrome
   - evernote
   - spotify
@@ -24,16 +23,14 @@ apps_cask:
   - sourcetree
   - gitkraken
   - visual-studio-code
-  - android-studio
-  - android-platform-tools
-  - figma
   - virtualbox
   - phpstorm
   - datagrip
   - whatsapp
   - postman
   - karabiner
-
-apps_store:
-  - '953006734 JSON Query'
-  - '803453959 Slack'
+  - altair
+  - expo-xde
+  - soda-player
+  - google-backup-and-sync
+  - slack

@@ -1,7 +1,8 @@
-- name: Set system defaults
-  script: set-defaults.sh
-  register: defaults_output
-  changed_when: false
+# TODO: this is failing on iOS High Sierra, need to investigage
+# - name: Set system defaults
+#   script: set-defaults.sh
+#   register: defaults_output
+#   changed_when: false
 
 - name: Set dock
   script: dock.sh
